@@ -329,26 +329,51 @@ I recommend a Cyber Incident and Resilience Working Group.
 
 ---
 
-### 3.2 Committee Interaction
-Business Units / IT / Security Teams
-│
-▼
-Security Working Group
-│
-▼
-Security Governance Committee
-│
-▼
-Executive Security Council
-│
-▼
-CEO
-│
-▼
-Board / Risk Committee
+## 3.2 Committee Interaction
 
+The governance structure operates as a two-way flow: risks and issues escalate upward, while strategic direction and guidance flow downward.
 
-Information should move upwards when the risk is significant, but not every operational issue should reach executive management.
+```mermaid
+flowchart TD
+    subgraph OP["🟢 OPERATIONAL"]
+        direction LR
+        BU[Business Units]
+        IT[IT Teams]
+        SEC[Security Teams]
+    end
+
+    SWG[🔵 Security Working Group<br/>Monthly + Post-Incident]
+    SGC[🟡 Security Governance Committee<br/>Monthly]
+    ESC[🟠 Executive Security Council<br/>Quarterly + Emergency]
+    CEO[🔴 CEO<br/>Executive Accountability]
+    BOARD[🟣 Board / Risk Committee<br/>Oversight]
+
+    BU -->|Escalate issues| SWG
+    IT -->|Escalate issues| SWG
+    SEC -->|Escalate issues| SWG
+
+    SWG -->|Recommendations| SGC
+    SGC -->|Significant risks| ESC
+    ESC -->|Material matters| CEO
+    CEO -->|Board-level risks| BOARD
+
+    BOARD -.->|Strategic direction| CEO
+    CEO -.->|Executive direction| ESC
+    ESC -.->|Policy & priorities| SGC
+    SGC -.->|Guidance & standards| SWG
+    SWG -.->|Operational guidance| BU
+    SWG -.->|Operational guidance| IT
+    SWG -.->|Operational guidance| SEC
+
+    style OP fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style SWG fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style SGC fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style ESC fill:#ffe0b2,stroke:#e65100,stroke-width:2px
+    style CEO fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style BOARD fill:#e1bee7,stroke:#6a1b9a,stroke-width:2px
+```
+
+**Key principle:** Information moves upward when a risk exceeds the authority of the current level, while strategic direction, policy and guidance flow downward. Not every operational issue should reach executive management, each layer resolves what it can before escalating.
 
 ---
 
@@ -494,7 +519,6 @@ The CISO and CRO/Risk should review the matrix at least annually to identify dup
 
 ## Evidence Bundle 5: Cyber-Risk Escalation
 
-### 5.1 Major Cyber-Risk Escalation Workflow
 ## 5.1 Major Cyber-Risk Escalation Workflow
 
 ```mermaid
@@ -535,7 +559,6 @@ flowchart TD
     style K fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style L fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
 ```
-
 
 ---
 
