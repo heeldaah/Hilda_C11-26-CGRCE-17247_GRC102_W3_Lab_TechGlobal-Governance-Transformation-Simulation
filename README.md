@@ -495,38 +495,46 @@ The CISO and CRO/Risk should review the matrix at least annually to identify dup
 ## Evidence Bundle 5: Cyber-Risk Escalation
 
 ### 5.1 Major Cyber-Risk Escalation Workflow
-Risk / Incident Identified
-│
-▼
-Initial Assessment
-│
-▼
-Determine Impact and Urgency
-│
-┌────┼────┐
-│ │ │
-▼ ▼ ▼
-Operational Executive Material
-│ │ │
-▼ ▼ ▼
-IT/CISO CEO + CEO + Board
-Exec
-│ │ │
-└────┼────┘
-▼
-Treatment / Decision
-│
-▼
-Decision Recorded
-│
-▼
-Actions Assigned
-│
-▼
-Follow-up / Assurance
-│
-▼
-Closure
+## 5.1 Major Cyber-Risk Escalation Workflow
+
+```mermaid
+flowchart TD
+    A[🔍 Risk / Incident Identified] --> B[📋 Initial Assessment]
+    B --> C{⚖️ Determine Impact<br/>and Urgency}
+    
+    C -->|Low Impact| D[🟢 Level 1: Operational]
+    C -->|Medium Impact| E[🟡 Level 2: Executive]
+    C -->|High Impact| F[🔴 Level 3: Material]
+    
+    D --> D1[CISO / IT<br/>Resolve at Operational Level]
+    E --> E1[CEO + Executive<br/>Security Council]
+    F --> F1[CEO + Board<br/>Immediate Escalation]
+    
+    D1 --> G[📝 Treatment / Decision]
+    E1 --> G
+    F1 --> G
+    
+    G --> H[📄 Decision Recorded<br/>Audit Trail]
+    H --> I[👤 Actions Assigned<br/>Owners + Due Dates]
+    I --> J[🔄 Follow-up / Assurance]
+    J --> K{✅ Issue Resolved?}
+    
+    K -->|Yes| L[🏁 Closure<br/>Documented]
+    K -->|No| G
+    
+    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style B fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style D fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style F fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style G fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style H fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style I fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style J fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style K fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style L fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+```
 
 
 ---
