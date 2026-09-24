@@ -1,0 +1,2 @@
+# Hilda_C11-26-CGRCE-17247_GRC102_W3_Lab_TechGlobal-Governance-Transformation-Simulation
+GRC102 Week 3 Practical Laboratory - TechGlobal Governance Transformation Simulation. A comprehensive security governance model for a 2,500-employee organisation, including governance architecture, roles and responsibilities, committee ecosystem, RACI matrix, cyber-risk escalation, and segregation of duties analysis.
