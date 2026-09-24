@@ -18,7 +18,7 @@
 | **Module** | Module 3 – Roles and Responsibilities in Security Governance |
 | **Maximum Score** | 100 marks |
 | **Effective Course Contribution** | 10% – Practical Laboratories |
-| **Date of Submission** | 25th September, 2026 |
+| **Date of Submission** | 24th September, 2026 |
 
 ---
 
